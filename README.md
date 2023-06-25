@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Aakash Sai Raj</h1>
-<h3 align="center">A passionate frontend developer from India</h3>
+<h3 align="center">A passionate software developer from India</h3>
 
 <p align="left"> <a href="https://twitter.com/theviscon" target="blank"><img src="https://img.shields.io/twitter/follow/theviscon?logo=twitter&style=for-the-badge" alt="theviscon" /></a> </p>
 
