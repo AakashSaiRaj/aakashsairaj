@@ -26,5 +26,5 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=aakashsairaj&show_icons=true&locale=en" alt="aakashsairaj" /></p>
 
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=AakashSaiRaj)
+![GitHub  Streak](https://streak-stats.demolab.com/?user=AakashSaiRaj)
 
