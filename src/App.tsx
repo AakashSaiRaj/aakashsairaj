@@ -39,7 +39,7 @@ function App() {
         <div className="hero-grid" aria-hidden="true" />
         <div className="orbit orbit-one" aria-hidden="true" />
         <figure className="orbit orbit-two portrait-orbit">
-          <img src="/images/aakash-hero-profile.png" alt="Aakash Sai Raj in profile" />
+          <img src="./images/aakash-hero-profile.png" alt="Aakash Sai Raj in profile" />
         </figure>
         <p className="eyebrow appear">01 / SOFTWARE ENGINEER <span>•</span> {profile.location}</p>
         <div className="hero-copy">
