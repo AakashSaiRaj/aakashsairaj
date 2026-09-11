@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Menu, X } from 'lucide-react'
-import { experience, profile, projects, skillGroups } from './data'
+import { certifications, experience, profile, projects, skillGroups } from './data'
 
-const nav = ['About', 'Experience', 'Capabilities', 'Projects']
+const nav = ['About', 'Experience', 'Capabilities', 'Credentials', 'Projects']
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -74,20 +74,32 @@ function App() {
         <div className="skills-grid">{skillGroups.map((group) => <article className="skill-card" key={group.number}><span>{group.number}</span><h3>{group.title}</h3><ul>{group.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></article>)}</div>
       </section>
 
+      <section id="credentials" className="credentials section-pad">
+        <p className="section-index">05 / CREDENTIALS</p>
+        <div className="section-heading"><h2>Proof of the<br /><em>practice.</em></h2><p>Selected certifications and credentials across cloud, Kubernetes, infrastructure, and AI.</p></div>
+        <div className="credential-summary"><span>17 VERIFIED CREDENTIALS</span><span>AWS · CNCF · HASHICORP · ANTHROPIC</span><a href="https://www.credly.com/users/aakashsairaj" target="_blank" rel="noreferrer">View Credly profile <ArrowUpRight /></a></div>
+        <div className="credential-grid">
+          {certifications.map((credential, index) => <a className="credential-card" key={`${credential.title}-${index}`} href={credential.url} target="_blank" rel="noreferrer" aria-label={`Verify ${credential.title}`}>
+            <div className={`credential-mark ${credential.image ? '' : 'credential-mark-text'}`}>{credential.image ? <img src={credential.image} alt="" loading="lazy" /> : <span>{credential.issuer === 'Anthropic' ? 'AI' : '✓'}</span>}</div>
+            <div className="credential-copy"><p>{credential.type}</p><h3>{credential.title}</h3><span>{credential.issuer}<ArrowUpRight /></span></div>
+          </a>)}
+        </div>
+      </section>
+
       <section id="projects" className="projects section-pad">
-        <p className="section-index">05 / PROJECTS</p>
+        <p className="section-index">06 / PROJECTS</p>
         <div className="project-list">{projects.map((project, index) => <article className={`project-card project-${index + 1}`} key={project.title}><div className="project-art" aria-hidden="true"><span>{index === 0 ? '{ }' : '↗'}</span><i /><i /><i /></div><div className="project-details"><p>{project.type}</p><h3>{project.title}</h3><p className="body-copy">{project.copy}</p><a href={index === 1 ? profile.github : '#contact'} target={index === 1 ? '_blank' : undefined} rel="noreferrer">{project.action} <ArrowUpRight /></a></div></article>)}</div>
       </section>
 
       <section className="education section-pad">
-        <p className="section-index">06 / EDUCATION</p>
+        <p className="section-index">07 / EDUCATION</p>
         <div className="education-row"><p>2019 — 2023</p><div><h2>GITAM Deemed University</h2><p>B.Tech, Computer Science & Engineering · 9.82 / 10.00</p></div><p className="award">Presidential Gold Medalist<br />Class of 2023</p></div>
       </section>
 
-      <section className="now section-pad"><p className="section-index">07 / NOW</p><div><p className="now-label">CURRENT FOCUS</p><h2>Building, learning,<br />and staying <em>curious.</em></h2><p className="body-copy">Use this space to share the ideas, technologies, or questions currently holding your attention.</p></div></section>
+      <section className="now section-pad"><p className="section-index">08 / NOW</p><div><p className="now-label">CURRENT FOCUS</p><h2>Building, learning,<br />and staying <em>curious.</em></h2><p className="body-copy">Use this space to share the ideas, technologies, or questions currently holding your attention.</p></div></section>
 
       <footer id="contact" className="contact">
-        <p className="section-index">08 / CONTACT</p>
+        <p className="section-index">09 / CONTACT</p>
         <h2>Let’s make<br />something <em>useful.</em></h2>
         <a className="email-link" href="mailto:hello@aakashsairaj.com">hello@aakashsairaj.com <ArrowUpRight /></a>
         <div className="footer-bottom"><p>© {new Date().getFullYear()} Aakash Sai Raj</p><div><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a><a href={profile.github} target="_blank" rel="noreferrer">GitHub</a></div><a href="#top">Back to top ↑</a></div>
