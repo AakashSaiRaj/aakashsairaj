@@ -62,7 +62,7 @@ export const projects = [
     type: 'Selected work',
     title: 'Projects, with context.',
     copy: 'This is ready for the work that best represents your craft — a system you shaped, a technical challenge you solved, or something you made simply because it mattered.',
-    action: 'Add a project',
+    action: '',
   },
   {
     type: 'Open source',
