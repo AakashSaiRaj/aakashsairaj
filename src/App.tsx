@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Menu, X } from 'lucide-react'
-import { certifications, experience, profile, projects, skillGroups } from './data'
+import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Medal, Menu, X } from 'lucide-react'
+import { certifications, education, experience, profile, projects, skillGroups } from './data'
 import { AmazonLogo, AwsLogo } from './logos'
 
 const nav = ['About', 'Experience', 'Capabilities', 'Credentials', 'Projects']
@@ -49,7 +49,7 @@ function App() {
         </div>
         <div className="hero-foot appear">
           <a className="round-link" href="#experience"><ArrowDownRight /> <span>Explore<br />my work</span></a>
-          <p>Currently building at<br /><strong>Amazon Kindle</strong></p>
+          <div className="hero-now"><span className="hero-now-mark"><AmazonLogo /></span><div className="hero-now-copy"><span className="hero-now-label">Currently building at</span><strong>Amazon <span>· Kindle</span></strong></div></div>
           <div className="hero-links"><a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin /></a><a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Github /></a></div>
         </div>
         <div className="scroll-mark"><span>SCROLL TO DISCOVER</span><i /></div>
@@ -94,7 +94,7 @@ function App() {
 
       <section className="education section-pad">
         <p className="section-index">07 / EDUCATION</p>
-        <div className="education-row"><p>2019 — 2023</p><div><h2>GITAM Deemed University</h2><p>B.Tech, Computer Science & Engineering · 9.82 / 10.00</p></div><p className="award">Presidential Gold Medalist<br />Class of 2023</p></div>
+        {education.map((item) => <div className="education-row" key={item.school}><p>{item.period}</p><div><h2>{item.school}{item.medal && <Medal className="edu-medal" aria-hidden="true" />}</h2><p>{item.detail}</p></div><p className="award">{item.meta}{item.metaNote && <><br />{item.metaNote}</>}</p></div>)}
       </section>
 
       <section className="now section-pad"><p className="section-index">08 / NOW</p><div><p className="now-label">CURRENT FOCUS</p><h2>Building, learning,<br />and staying <em>curious.</em></h2><p className="body-copy">Use this space to share the ideas, technologies, or questions currently holding your attention.</p></div></section>
