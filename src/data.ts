@@ -49,9 +49,12 @@ export const education = [
 ]
 
 export const skillGroups = [
-  { number: '01', title: 'Cloud & platform', skills: ['AWS services', 'Containers', 'Kubernetes', 'Deployment systems'] },
-  { number: '02', title: 'Engineering practice', skills: ['System thinking', 'DevOps', 'Distributed collaboration', 'Problem solving'] },
-  { number: '03', title: 'Always expanding', skills: ['React', 'Java', 'Postgres', 'RAG'] },
+  { number: '01', title: 'Software engineering', skills: ['TypeScript & React', 'Next.js & Node.js', 'Java & Spring Boot', 'Python & Go', 'REST & GraphQL APIs', 'Postgres & Redis', 'Microservices & event-driven'] },
+  { number: '02', title: 'Solutions architecture', skills: ['System design', 'Distributed systems', 'Scalability & high availability', 'Well-Architected Framework', 'AWS core services', 'Lambda & serverless', 'VPC & networking', 'Cost optimization'] },
+  { number: '03', title: 'Containers & orchestration', skills: ['Kubernetes', 'Docker', 'Helm', 'Autoscaling', 'Service mesh', 'Operators & CRDs'] },
+  { number: '04', title: 'Infrastructure & delivery', skills: ['Terraform', 'AWS CDK', 'CloudFormation', 'GitOps', 'Deployment pipelines', 'Canary & blue-green', 'Automated rollback'] },
+  { number: '05', title: 'Observability & reliability', skills: ['Metrics & alerting', 'Structured logging', 'Distributed tracing', 'SLOs & error budgets', 'Incident response', 'Chaos & load testing'] },
+  { number: '06', title: 'AI engineering', skills: ['LLM applications', 'RAG pipelines', 'Agentic workflows', 'Prompt engineering', 'Evals & guardrails', 'Vector search'] },
 ]
 
 export const projects = [

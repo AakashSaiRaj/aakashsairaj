@@ -71,7 +71,7 @@ function App() {
 
       <section id="capabilities" className="capabilities section-pad">
         <p className="section-index">04 / CAPABILITIES</p>
-        <div className="section-heading"><h2>Engineering with<br /><em>range</em> and depth.</h2><p>A concise snapshot of the areas that shape how I approach software today.</p></div>
+        <div className="section-heading"><h2>Engineering with<br /><em>range</em> and depth.</h2><p>The systems, tools, and practices I work across, from cloud infrastructure and reliability to applied AI.</p></div>
         <div className="skills-grid">{skillGroups.map((group) => <article className="skill-card" key={group.number}><span>{group.number}</span><h3>{group.title}</h3><ul>{group.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></article>)}</div>
       </section>
 
