@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Menu, X } from 'lucide-react'
 import { certifications, experience, profile, projects, skillGroups } from './data'
+import { AmazonLogo, AwsLogo } from './logos'
 
 const nav = ['About', 'Experience', 'Capabilities', 'Credentials', 'Projects']
 
@@ -64,7 +65,7 @@ function App() {
         <p className="section-index">03 / EXPERIENCE</p>
         <div className="section-heading"><h2>A few places<br />I’ve learned to <em>ship.</em></h2><p>A growing career shaped by high-scale products, thoughtful teams, and a real appetite for hard problems.</p></div>
         <div className="roles">
-          {experience.map((role, index) => <article className="role" key={role.company}><span className="role-number">0{index + 1}</span><p className="role-period">{role.period}</p><div><p className="role-company">{role.company}</p><h3>{role.title}</h3></div><p className="role-copy">{role.copy}</p><div className="tags">{role.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></article>)}
+          {experience.map((role, index) => <article className="role" key={role.company}><span className="role-number">0{index + 1}</span><p className="role-period">{role.period}</p><div className="role-identity"><span className={`role-logo role-logo-${role.logo}`}>{role.logo === 'aws' ? <AwsLogo /> : <AmazonLogo />}</span><div className="role-titles"><p className="role-company">{role.company}</p><h3>{role.title}</h3></div></div><p className="role-copy">{role.copy}</p><div className="tags">{role.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></article>)}
         </div>
       </section>
 

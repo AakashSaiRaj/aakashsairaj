@@ -9,6 +9,7 @@ export const profile = {
 export const experience = [
   {
     period: '2025 — Present',
+    logo: 'amazon',
     company: 'Amazon · Kindle',
     title: 'Software Application Engineer III',
     copy: 'Working in the Kindle organization, contributing to software that supports a product used by readers around the world.',
@@ -16,6 +17,7 @@ export const experience = [
   },
   {
     period: '2023 — 2025',
+    logo: 'aws',
     company: 'Amazon Web Services',
     title: 'Cloud Engineer · Deployment',
     copy: 'Started my career in AWS Deployment, collaborating across continents and building a foundation in DevOps, Kubernetes, containers, and AWS services.',
